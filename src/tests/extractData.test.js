@@ -34,12 +34,28 @@ describe("Regex Data Extraction", () => {
     expect(result.creditCards).toContain("9876 5432 1098 7654");
   });
 
+  test("should extract HTML tags from text", () => {
+    const result = extractData("Check out <div>HTML content</div>, <span>more HTML</span>, <a href=\"#\">link</a>");
+    expect(result.htmlTags).toContain("<div>HTML content</div>");
+    expect(result.htmlTags).toContain("<span>more HTML</span>");
+    expect(result.htmlTags).toContain("<a href=\"#\">link</a>");
+  });
+
+  test("should extract hashtags from text", () => {
+    const result = extractData("Check out #hashtags, #moreTags, #evenMore");
+    expect(result.hashtags).toContain("#hashtags");
+    expect(result.hashtags).toContain("#moreTags");
+    expect(result.hashtags).toContain("#evenMore");
+  });
+
   test("should handle empty input", () => {
     const result = extractData("");
     expect(result.emails).toEqual([]);
     expect(result.phones).toEqual([]);
     expect(result.urls).toEqual([]);
     expect(result.creditCards).toEqual([]);
+    expect(result.htmlTags).toEqual([]);
+    expect(result.hashtags).toEqual([]);
   });
 
   test("should handle text with no matches", () => {
@@ -48,5 +64,7 @@ describe("Regex Data Extraction", () => {
     expect(result.phones).toEqual([]);
     expect(result.urls).toEqual([]);
     expect(result.creditCards).toEqual([]);
+    expect(result.htmlTags).toEqual([]);
+    expect(result.hashtags).toEqual([]);
   });
 });

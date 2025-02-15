@@ -1,63 +1,68 @@
-# Extracting Regex Information 
 
-## Synopsis
-The **Regex Data Extraction CLI** is a command-line tool created with **Node.js** that extracts specific types of data from a given text input by using **regular expressions**. The tool can locate and extract **credit card numbers, phone numbers, emails, and URLs**. An interactive interface allows users to query the data that has been retrieved.
+# Extraction Of Regex Information
 
+## summary
+Developed with Node.js, the **Regex Data Extraction CLI is a command-line tool that uses regular expressions to extract particular kinds of data from a given text input. Credit card numbers, phone numbers, emails, and URLs can be found and extracted using the tool. Users can query the retrieved data through an interactive interface.
 
-
-## Features: Extracts and displays
-  **Email addresses** (for instance, test@mail.com)
-  - **URLs** Take `https://example.com`, for example.
-  As an illustration, `(123) 456-7890` **Contact numbers**
-  The credit card numbers are as follows. One example is `1234-5678-9012-3456`.
-An interactive command-line interface
-Modular code structure for simpler upkeep
-Extensive **unit testing** using Jest
+## Features: 
+Email addresses (such as test@mail.com) are extracted and displayed. - URLs For instance, consider https://example.com. ~(123) 456-7890` Contact numbers, for example
+These are the credit card numbers. The number 1234-5678-9012-3456 is one example.
+A command-line interface that is interactive
+Code structure that is modular for easier maintenance
+Using Jest for extensive unit testing
 
 ## Technologies Used: 
-- **Node.js** - JavaScript runtime environment - **Jest** The **Readline Module** is a framework for unit testing. makes interactive CLI features possible.
+- Node.js - JavaScript runtime environment 
+- Jest A unit testing framework called the Readline Module. creates features for interactive CLI feasible.
 
-## Configuration
-### Requirements
-Make sure **Node.js** is installed. It is available for download and installation via [the official Node.js website](https://nodejs.org/).
+### Configuration 
+### Necessities
 
-### Procedures
-``sh git clone https://github.com/soniaetuhoko/alu_regex-data-extraction-soniaetuhoko.git cd alu_regex-data-extraction-soniaetuhoko ``` 1. Clone the repository
-Install dependencies by running npm install ```sh ~``
+Ensure that you have Node.js installed. Installing it can be done through [the official Node.js website](https://nodejs.org/).
 
-## Application
-To launch the CLI, type the following command: ```sh node app.js ```
+The steps are as follows: 
+``sh git clone https://github.com/soniaetuhoko/alu_regex-data-extraction-soniaetuhoko.git
 
-### Interactive Instructions
-Use the following commands after the script has finished running:
-To view all extracted **emails**, press **'a'**.
-To see all of the retrieved **URLs**, press **'b'**.
-To view all retrieved **phone numbers**, press **'c'**.
-Press **'d'** All retrieved **credit card numbers** are displayed.
-Press **'q'** End the CLI
+ cd alu_regex-data-extraction-soniaetuhoko 
 
-## Project Organization  
+1. Use npm install sh ~`` to clone the repository and install dependencies.
+
+## Use
+Enter the following command to start the CLI: sh node app.js 
+
+### Interactive Guides
+Once the script has completed executing, use the following commands:
+- Press 'a' to see all the emails.
+- Press 'b' to see alll the urls.
+- Press 'c' to see all retrieved phone numbers.
+- Press 'd' The credit card numbers that have been retrieved are all shown.
+- Press 'e' to see all retrieved Html Tags.
+- Press 'f' The hashtags that have been retrieved are all shown.
+- Press 'q' Close the CLI
+
+Press 'q' Close the CLI
+
+## Project Structure 
+``` 
+
+├── src/ 
+│ 
+├── extractData.js # uses regex to extract data 
+├── regexPatterns.js # contain the regex patterns
+├── tests/ 
+│ 
+├── extractData.test.ts # defines regex patterns The test cases for Jest are 
+├── app.js. The main package.json file in the CLI application 
+├── package.json # Dependencies for the project 
+└── README.md # Documents 
+
 ```
-  ├── src/
-  │   ├── extractData.js   # Extracts data using regex
-  │   ├── regexPatterns.js # Defines regex patterns
-  ├── tests/
-  │   ├── extractData.test.ts  # Jest test cases
-  ├── app.js              # Main CLI application
-  ├── package.json        # Project dependencies
-  └── README.md           # Documentation
-```
 
-## Examining
-Use ```sh npm test ``` to execute unit tests.
-This guarantees that the regex patterns function properly across various test scenarios.
+## Analysing
 
+To run unit tests, use sh npm test .
+This ensures that the regex patterns work correctly in a range of test situations.
 
-## Author: **Sonia Etuhoko** created this.
+This was written by Sonia Etuhoko.
 
-
-Cheers to coding! 🚀
-
-
-
-
+Let's celebrate coding! 🚀
