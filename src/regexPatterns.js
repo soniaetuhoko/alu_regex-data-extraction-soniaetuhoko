@@ -6,4 +6,3 @@ const regexPatterns = {
   };
   
   module.exports = regexPatterns;
-  
